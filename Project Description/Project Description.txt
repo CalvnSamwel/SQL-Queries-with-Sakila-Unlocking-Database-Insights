@@ -1,0 +1,75 @@
+## Project Overview 🎬
+This project showcases the use of SQL queries to explore the Sakila database, a comprehensive dataset of movie rentals. The aim is to analyze various aspects of the database, such as films, actors, customers, and store operations, to extract meaningful insights and solve problem statements. The project focuses on foundational SQL techniques, highlighting the ability to query, filter, aggregate, and organize data for better understanding.
+The code provided solves several challenges and answers research questions by applying SQL concepts like selecting columns, filtering with conditions, aggregating data, and using string operations.
+
+## Learning Goals 🎯
+Through this project, you will:
+- Gain practical experience in writing and executing SQL queries to analyze real-world databases.
+- Master essential SQL techniques, including:- Querying data with SELECT and filtering with WHERE.
+- Sorting results with ORDER BY and limiting outputs using LIMIT.
+- Aggregating insights using COUNT and retrieving unique values with DISTINCT.
+- Utilizing string operations like LIKE for pattern matching.
+
+
+
+## Dataset 📊
+The project revolves around the Sakila database, a structured dataset containing details about movie rentals, such as films, actors, customers, and store information. The following files are critical for database setup:
+- Database Schema: Creates the structure of the database.
+- Sample Data: Populates the tables with comprehensive data.
+- Entity Relationship Diagram (ERD): Visualizes the relationships between various entities in the database.
+
+
+## Challenges and Queries 🧩
+A series of SQL challenges were tackled to derive actionable insights:
+1. Exploring the Database
+- Display all available tables using SHOW TABLES.
+- Retrieve all records from the actor, film, and customer tables.
+
+2. Column Retrieval
+- Extract film titles from the film table.
+- Retrieve languages used in films, aliased as language, from the language table.
+- Fetch first names of employees from the staff table.
+
+3. Unique Data Retrieval
+- Retrieve distinct release years of the films.
+
+4. Counting Records for Insights
+- Count the number of stores operated by the company.
+- Determine the total number of employees.
+- Find the number of films available for rent and those that have been rented.
+- Count distinct actor last names in the actor table.
+
+5. Film Analysis
+- Retrieve the 10 longest films by duration, sorted in descending order.
+
+6. Filtering Data
+- Fetch all actors with the first name "SCARLETT".
+
+7. Advanced Filtering (BONUS):
+- Retrieve movies with "ARMAGEDDON" in their title and a duration exceeding 100 minutes.
+- Determine the number of films that include "Behind the Scenes" content in their special features.
+
+
+## Code Summary 🛠️
+The SQL code written for this project performs operations like:
+- Querying and filtering data (SELECT, WHERE, LIKE).
+- Sorting and limiting results (ORDER BY, LIMIT).
+- Aggregating data and counting records (COUNT, DISTINCT).
+- Using string operations to match patterns in column values.
+
+Examples of key queries:
+- Counting Records:SELECT COUNT(*) AS number_of_stores FROM store;
+SELECT COUNT(DISTINCT inventory_id) AS rented_films FROM rental;
+
+- Film Filtering and Analysis:SELECT title, length 
+FROM film 
+WHERE title LIKE '%ARMAGEDDON%' 
+AND length > 100;
+SELECT title, length 
+FROM film 
+ORDER BY length DESC LIMIT 10;
+
+
+
+## Conclusion ✅
+This project demonstrates how SQL can be leveraged to extract valuable insights from relational databases. It emphasizes foundational query techniques while providing hands-on experience working with a real-world dataset. By successfully completing these challenges, the project highlights the importance of SQL in data analysis and decision-making.
